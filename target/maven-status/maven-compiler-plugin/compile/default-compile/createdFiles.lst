@@ -1,0 +1,3 @@
+com/uniLibrary/model/Book.class
+com/uniLibrary/controller/BookBean.class
+com/uniLibrary/repository/BookRepository.class

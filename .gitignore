@@ -1,0 +1,28 @@
+# Diretórios e arquivos de build
+target/
+build/
+
+# Arquivos gerados por IDEs
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# Dependências do Maven/Gradle
+.mvn/
+.gradle/
+
+# Arquivos de log
+*.log
+
+# Arquivos do sistema operacional
+*~
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração local
+.env
+.env.local
+.env.development
+.env.production
