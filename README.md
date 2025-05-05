@@ -34,11 +34,11 @@ The web system should offer the following functionalities:
 - Listing of registered books.
 - Deletion of books.
 - Web interfaces developed with **JSP** and/or **JSF**.
-
-  RUN: mvn jetty:run
 - Handling of invalid inputs (e.g., empty fields, invalid ISBN).
 - Organization of the project into packages: **model**, **controller**, **view**.
 - Clear separation between business logic and presentation.
 - Well-commented and easy-to-read code.
 - Proper use of **Servlets** to control actions.
 - Use of **JSF** in at least one of the interfaces.
+
+## RUN: mvn jetty:run
