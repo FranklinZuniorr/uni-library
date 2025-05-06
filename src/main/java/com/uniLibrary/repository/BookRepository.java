@@ -16,6 +16,6 @@ public class BookRepository {
     }
 
     public static void removeBook(String isbn) {
-        /* books.removeIf(book -> book.getIsbn().equals(isbn)); */
+        books.removeIf(book -> book.getIsbn().equals(isbn));
     }
 }

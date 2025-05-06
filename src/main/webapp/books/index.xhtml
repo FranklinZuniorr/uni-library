@@ -5,39 +5,77 @@
 <h:head>
     <meta charset="UTF-8" />
     <title>Lista de Livros</title>
+
+    <style>
+        #container{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        #title{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </h:head>
 <h:body>
 
-<h1>Lista de Livros</h1>
+    <div id="container">
+        <div id="title">
+            <h1>Lista de Livros</h1>
+        </div>
+        
+        <h:form>
+            <h:messages globalOnly="true" />
 
-<h:form>
-    <h:dataTable value="#{bookBean.books}" var="livro">
-        <h:column>
-            <f:facet name="header">Título</f:facet>
-            #{livro.titulo}
-        </h:column>
+            <h:outputText value="Título" />
+            <h:inputText value="#{bookBean.formBook.title}" required="true" />
 
-        <h:column>
-            <f:facet name="header">Autor</f:facet>
-            #{livro.autor}
-        </h:column>
+            <h:outputText value="Autor" />
+            <h:inputText value="#{bookBean.formBook.author}" required="true" />
 
-        <h:column>
-            <f:facet name="header">Ano de Publicação</f:facet>
-            #{livro.anoPublicacao}
-        </h:column>
+            <h:outputText value="Ano de Publicação" />
+            <h:inputText value="#{bookBean.formBook.year}" required="true" />
 
-        <h:column>
-            <f:facet name="header">ISBN</f:facet>
-            #{livro.isbn}
-        </h:column>
+            <h:outputText value="ISBN" />
+            <h:inputText value="#{bookBean.formBook.isbn}" required="true" />
 
-        <h:column>
-            <f:facet name="header">Ação</f:facet>
-            <h:commandButton value="Excluir" action="#{bookBean.excluirLivro(livro.isbn)}" />
-        </h:column>
-    </h:dataTable>
-</h:form>
-
+            <h:commandButton value="Adicionar Livro" action="#{bookBean.addBook}" />
+        </h:form>
+    
+        <h:form>
+            <h:dataTable id="bookTable" value="#{bookBean.books}" var="book">
+                <h:column>
+                    <f:facet name="header">Título</f:facet>
+                    #{book.title}
+                </h:column>
+    
+                <h:column>
+                    <f:facet name="header">Autor</f:facet>
+                    #{book.author}
+                </h:column>
+    
+                <h:column>
+                    <f:facet name="header">Ano de Publicação</f:facet>
+                    #{book.year}
+                </h:column>
+    
+                <h:column>
+                    <f:facet name="header">ISBN</f:facet>
+                    #{book.isbn}
+                </h:column>
+    
+                <h:column>
+                    <f:facet name="header">Ação</f:facet>
+                    <h:commandButton value="Excluir" action="#{bookBean.removeBook(book.isbn)}" />
+                </h:column>
+            </h:dataTable>
+        </h:form>
+    </div>
+    
 </h:body>
 </html>
