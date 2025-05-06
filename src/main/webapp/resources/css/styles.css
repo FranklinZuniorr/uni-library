@@ -1,6 +1,11 @@
+html {
+    min-height: 100%;
+}
+
 body {
     box-sizing: border-box;
     padding: 0.5rem;
+    min-height: 100%;
 }
 
 #container{
@@ -15,7 +20,7 @@ body {
         display: flex;
         justify-content: center;
     }
-    
+
     #area-new-book {
         display: flex;
         flex-direction: column;
@@ -25,7 +30,9 @@ body {
         padding: 0.5rem;
         border-radius: 0.6rem;
         margin-bottom: 1.5rem;
-        background-color: rgb(233, 233, 233) !important;
+        background-color: #ffffff7a;
+        border-radius: 0.5rem;
+        box-shadow: 0px 0px 12px -9px;
     
         #area-inputs-new-book {
             display: flex;
@@ -42,6 +49,40 @@ body {
         #area-button-new-book {
             display: flex;
             justify-content: end;
+        }
+    }
+
+    #area-table {
+        max-width: 50rem;
+        width: 100%;
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 10px 12px;
+
+            thead {
+                width: 100%;
+                height: 2rem;
+
+                th {
+                    text-align: start;
+                    white-space: nowrap;
+                }
+
+                th:nth-child(5) {
+                    text-align: end;
+                }
+            }
+
+            tbody {
+                tr {
+                    td:nth-child(5) {
+                        display: flex;
+                        justify-content: end;
+                    }
+                }
+            }
         }
     }
 }

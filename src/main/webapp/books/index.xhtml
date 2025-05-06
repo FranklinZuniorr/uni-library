@@ -5,7 +5,7 @@
 <h:head>
     <meta charset="UTF-8" />
     <title>Lista de Livros</title>
-    <h:outputStylesheet name="styles.css?v=16" library="css" />
+    <h:outputStylesheet name="styles.css?v=35" library="css" />
 </h:head>
 <h:body>
     <div id="container">
@@ -43,7 +43,7 @@
             </div>
         </h:form>
     
-        <h:form>
+        <h:form id="area-table">
             <h:dataTable id="bookTable" value="#{bookBean.books}" var="book">
                 <h:column>
                     <f:facet name="header">Título</f:facet>
