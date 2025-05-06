@@ -5,45 +5,40 @@
 <h:head>
     <meta charset="UTF-8" />
     <title>Lista de Livros</title>
-
-    <style>
-        #container{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        #title{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-    </style>
+    <h:outputStylesheet name="styles.css?v=16" library="css" />
 </h:head>
 <h:body>
-
     <div id="container">
         <div id="title">
-            <h1>Lista de Livros</h1>
+            <h1>UNI - LIBRARY</h1>
         </div>
         
-        <h:form>
-            <h:outputText value="Título" />
-            <h:inputText value="#{bookBean.formBook.title}" />
+        <h:form id="area-new-book">
+            <div id="area-inputs-new-book">
+                <div>
+                    <h:outputText value="Título" />
+                    <h:inputText value="#{bookBean.formBook.title}" />
+                </div>
 
-            <h:outputText value="Autor" />
-            <h:inputText value="#{bookBean.formBook.author}" />
+                <div>
+                    <h:outputText value="Autor" />
+                    <h:inputText value="#{bookBean.formBook.author}" />
+                </div>
 
-            <h:outputText value="Ano de Publicação" />
-            <h:inputText value="#{bookBean.formBook.year}" />
+                <div>
+                    <h:outputText value="Ano de Publicação" />
+                    <h:inputText value="#{bookBean.formBook.year}" />
+                </div>
 
-            <h:outputText value="ISBN" />
-            <h:inputText value="#{bookBean.formBook.isbn}" />
+                <div>
+                    <h:outputText value="ISBN" />
+                    <h:inputText value="#{bookBean.formBook.isbn}" />
+                </div>
+            </div>
 
-            <div>
-                <h:messages globalOnly="true" />
+            <h:messages globalOnly="true" />
+
+            <div id="area-button-new-book">
                 <h:commandButton value="Adicionar Livro" action="#{bookBean.addBook}" />
             </div>
         </h:form>

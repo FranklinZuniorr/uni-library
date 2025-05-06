@@ -1,0 +1,49 @@
+body {
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+
+#container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    #title{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #area-new-book {
+        display: flex;
+        flex-direction: column;
+        max-width: 50rem;
+        width: 100%;
+        gap: 0.7rem;
+        padding: 0.5rem;
+        border-radius: 0.6rem;
+        margin-bottom: 1.5rem;
+        background-color: rgb(233, 233, 233) !important;
+    
+        #area-inputs-new-book {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+        
+            div {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+            }
+        }
+        
+        #area-button-new-book {
+            display: flex;
+            justify-content: end;
+        }
+    }
+}
+
+
