@@ -5,11 +5,12 @@
 <h:head>
     <meta charset="UTF-8" />
     <title>Lista de Livros</title>
-    <h:outputStylesheet name="styles.css?v=52" library="css" />
+    <h:outputStylesheet name="styles.css?v=63" library="css" />
 </h:head>
 <h:body>
     <div id="container">
         <div id="title">
+            <h:graphicImage library="img" name="book.svg" alt="book-img" />
             <h1>UNI - LIBRARY</h1>
         </div>
         
@@ -50,6 +51,10 @@
             </div>
         </h:form>
     
+        <h:form rendered="#{not empty bookBean.books}">
+            <h3>Livros publicados:</h3>
+        </h:form>
+
         <h:form id="area-table" rendered="#{not empty bookBean.books}">
             <h:dataTable 
             id="bookTable" 
@@ -82,7 +87,6 @@
                 </h:column>
             </h:dataTable>
         </h:form>
-    </div>
-    
+    </div>  
 </h:body>
 </html>

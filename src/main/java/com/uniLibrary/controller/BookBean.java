@@ -51,6 +51,7 @@ public class BookBean implements Serializable {
             return "/books/index.xhtml?faces-redirect=true"; // Evita reenvio do formulário ao atualizar
     
         } catch (IllegalArgumentException e) {
+            // Mensagem de erro
             FacesContext.getCurrentInstance().addMessage(null, 
                     new FacesMessage(FacesMessage.SEVERITY_ERROR, e.getMessage(), e.getMessage()));
             return "/books/index.xhtml";
