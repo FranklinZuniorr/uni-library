@@ -1,5 +1,7 @@
 package com.uniLibrary.model;
 
+import java.time.Year;
+
 public class Book {
     private String title;
     private String author;
@@ -21,7 +23,7 @@ public class Book {
         this.author = "";
         this.isbn = "";
         this.title = "";
-        this.year = 0;
+        this.year = Year.now().getValue();
     }
 
     public String getTitle() {

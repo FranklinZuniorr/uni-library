@@ -8,11 +8,11 @@ public class FormBook {
     private int year;
     private String isbn;
 
-    public void Book() {
-        this.author = "";
-        this.isbn = "";
-        this.title = "";
-        this.year = Year.now().getValue();
+    public FormBook() {
+        author = "";
+        isbn = "";
+        title = "";
+        year = Year.now().getValue();
     }
 
     public String getTitle() {

@@ -30,21 +30,22 @@
         </div>
         
         <h:form>
-            <h:messages globalOnly="true" />
-
             <h:outputText value="Título" />
-            <h:inputText value="#{bookBean.formBook.title}" required="true" />
+            <h:inputText value="#{bookBean.formBook.title}" />
 
             <h:outputText value="Autor" />
-            <h:inputText value="#{bookBean.formBook.author}" required="true" />
+            <h:inputText value="#{bookBean.formBook.author}" />
 
             <h:outputText value="Ano de Publicação" />
-            <h:inputText value="#{bookBean.formBook.year}" required="true" />
+            <h:inputText value="#{bookBean.formBook.year}" />
 
             <h:outputText value="ISBN" />
-            <h:inputText value="#{bookBean.formBook.isbn}" required="true" />
+            <h:inputText value="#{bookBean.formBook.isbn}" />
 
-            <h:commandButton value="Adicionar Livro" action="#{bookBean.addBook}" />
+            <div>
+                <h:messages globalOnly="true" />
+                <h:commandButton value="Adicionar Livro" action="#{bookBean.addBook}" />
+            </div>
         </h:form>
     
         <h:form>

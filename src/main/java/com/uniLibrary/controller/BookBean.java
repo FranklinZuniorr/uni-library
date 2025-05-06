@@ -31,7 +31,7 @@ public class BookBean implements Serializable {
     public String removeBook(String isbn) {
         BookRepository.removeBook(isbn);
         books = BookRepository.getAllBooks();  // Atualiza a lista de livros após exclusão
-        return "bookList";  // Retorna para a mesma página
+        return "/books/index.xhtml";  // Retorna para a mesma página
     }
 
     public String addBook() {
