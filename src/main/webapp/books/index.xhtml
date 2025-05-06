@@ -5,7 +5,7 @@
 <h:head>
     <meta charset="UTF-8" />
     <title>Lista de Livros</title>
-    <h:outputStylesheet name="styles.css?v=51" library="css" />
+    <h:outputStylesheet name="styles.css?v=52" library="css" />
 </h:head>
 <h:body>
     <div id="container">
@@ -17,22 +17,30 @@
             <div id="area-inputs-new-book">
                 <div>
                     <h:outputText value="Título" />
-                    <h:inputText value="#{bookBean.formBook.title}" />
+                    <h:inputText value="#{bookBean.formBook.title}">
+                        <f:passThroughAttribute name="placeholder" value="Digite o título" />
+                    </h:inputText>
                 </div>
 
                 <div>
                     <h:outputText value="Autor" />
-                    <h:inputText value="#{bookBean.formBook.author}" />
+                    <h:inputText value="#{bookBean.formBook.author}">
+                        <f:passThroughAttribute name="placeholder" value="Digite o autor" />
+                    </h:inputText>
                 </div>
 
                 <div>
                     <h:outputText value="Ano de Publicação" />
-                    <h:inputText value="#{bookBean.formBook.year}" type="number"  />
+                    <h:inputText value="#{bookBean.formBook.year}" type="number">
+                        <f:passThroughAttribute name="placeholder" value="Digite o ano" />
+                    </h:inputText>
                 </div>
 
                 <div>
                     <h:outputText value="ISBN" />
-                    <h:inputText value="#{bookBean.formBook.isbn}" />
+                    <h:inputText value="#{bookBean.formBook.isbn}">
+                        <f:passThroughAttribute name="placeholder" value="978-3-16-148410-0" />
+                    </h:inputText>
                 </div>
             </div>
 
@@ -42,12 +50,11 @@
             </div>
         </h:form>
     
-        <h:form id="area-table">
+        <h:form id="area-table" rendered="#{not empty bookBean.books}">
             <h:dataTable 
             id="bookTable" 
             value="#{bookBean.books}" 
             var="book"
-            rendered="#{not empty bookBean.books}"
             >
                 <h:column>
                     <f:facet name="header">Título</f:facet>

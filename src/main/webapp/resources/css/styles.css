@@ -109,6 +109,10 @@ input[type="submit"] {
                     td:nth-child(5) {
                         display: flex;
                         justify-content: end;
+
+                        input {
+                            width: 100%;
+                        }
                     }
                 }
             }

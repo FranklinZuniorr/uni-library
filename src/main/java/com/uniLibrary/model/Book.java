@@ -67,8 +67,8 @@ public class Book {
         if (isbn == null || isbn.trim().isEmpty()) {
             throw new IllegalArgumentException("O ISBN não pode ser vazio.");
         }
-        if (!isbn.matches("\\d{13}")) {  // Verifica se o ISBN tem 13 dígitos numéricos
-            throw new IllegalArgumentException("O ISBN deve ter exatamente 13 dígitos.");
+        if (!isbn.matches("^(97(8|9))?\\-?\\d{1,5}\\-?\\d{1,7}\\-?\\d{1,7}\\-?[\\dX]$")) {
+            throw new IllegalArgumentException("Formato de ISBN inválido.");
         }
         this.isbn = isbn;
     }
